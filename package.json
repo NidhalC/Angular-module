@@ -1,0 +1,30 @@
+{
+  "name": "Angular-module",
+  "version": "1.0.0",
+  "description": "Angular-module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NidhalC/Angular-module.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NidhalC/Angular-module/issues"
+  },
+  "homepage": "https://github.com/NidhalC/Angular-module#readme",
+  "dependencies": {
+    "@angular/common": "^7.2.10",
+    "@angular/compiler": "^7.2.10",
+    "@angular/core": "^7.2.10",
+    "@angular/platform-browser": "^7.2.10",
+    "@angular/platform-browser-dynamic": "^7.2.10",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.4.0",
+    "zone.js": "^0.9.0"
+  }
+}

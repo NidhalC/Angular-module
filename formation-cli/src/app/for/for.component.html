@@ -1,0 +1,16 @@
+<div [ngSwitch]="formations.length">
+  <p *ngSwitchCase="0">Aucune formation disponibles</p>
+  <p *ngSwitchCase="1">Une formation disponible : </p>
+  <p *ngSwitchDefault [ngClass]="{'sapin': true,'sapin-italic': true}">Formations disponibles :</p>
+</div>
+
+
+<ul>
+  <li *ngFor="let formation of formations; index as i; first as f; last as l">
+    <p [ngClass]="{'txtRed' :f, 'txtGreen':l}">{{i}} - {{ formation.nom }} <span *ngIf=" formation.dateFin && formation.dateDebut">Date de debut : {{formation?.dateDebut | date:'dd/MM/yyyy'}}
+      Date de fin : {{ formation?.dateFin | date}}</span>
+    <span *ngIf="formation.prix"> Prix {{ formation?.prix | currency:'EUR' }}</span></p>
+
+  </li>
+</ul>
+

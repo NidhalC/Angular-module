@@ -1,0 +1,9 @@
+
+<div [hidden]="isHidden">
+<ng-template [ngIf]="isDisplay">
+  <p>{{formation.nom}}</p>
+  <p>{{formation.description}}</p>
+</ng-template>
+</div>
+<button (click)="myClick()" > Formation </button>
+
