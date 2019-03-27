@@ -1,0 +1,7 @@
+<div>
+  <label name="todo"> Chose à faire </label>
+  <input name="todo" [value]="title"
+         (change)="handleChange($event)">
+  <button (click)="handleClick()"> Add </button>
+  <button (click)="handleResetClick()"> reset </button>
+</div>

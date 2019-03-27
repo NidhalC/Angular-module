@@ -1,0 +1,15 @@
+<div>
+<p [ngClass]="{'barre': todo.isDone}">{{todo.title| uppercase}}
+    <label for="mc"></label>
+    <input
+      type="checkbox"
+      name="mc"
+      id="mc"
+      [checked]="todo.isDone"
+      (change)="handleCheckBoxChange()"
+    >
+</p>
+
+
+
+</div>
