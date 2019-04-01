@@ -1,0 +1,29 @@
+<nav class="nav">
+  <span class="nav__menu">
+  <a href=""
+     [routerLink]="['/']"
+  [routerLinkActive]="['lien-click']"
+     [routerLinkActiveOptions]="{exact:true}">Home  </a>
+  </span>
+
+  <span class="nav__menu">
+  <a href=""
+     [routerLink]="['/detail', idDetail ]"
+     [routerLinkActive]="['lien-click']"
+  [routerLinkActiveOptions]="{exact:true}" >  Detail</a>
+  </span>
+  <p>
+
+  </p>
+
+  <span>
+    <button
+      (click)="navigateToDetail()">
+      detail
+    </button>
+  </span>
+</nav>
+
+
+<router-outlet></router-outlet>
+
