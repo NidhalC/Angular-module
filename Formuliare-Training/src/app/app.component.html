@@ -1,0 +1,18 @@
+<nav class="nav">
+  <span class="nav__menu">
+  <a href=""
+     [routerLink]="['/']"
+     [routerLinkActive]="['lien-click']"
+     [routerLinkActiveOptions]="{exact:true}">Home  </a>
+  </span>
+</nav>
+<nav class="nav_menu">
+  <span>
+    <button
+      (click)="navigateToFormulaire()">
+      formulaire
+    </button>
+  </span>
+</nav>
+
+<router-outlet></router-outlet>

@@ -3,25 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { DetailComponent } from './detail/detail.component';
-import {RouterModule} from "@angular/router";
-import {ROUTES} from "./app.routes";
-import { FormationsComponent } from './formations/formations.component';
-import { ConnaissancesComponent } from './connaissances/connaissances.component';
+import {RouterModule } from "@angular/router";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { TemplateComponent } from './template/template.component';
-
+import { FormulaireComponent } from './formulaire/formulaire.component';
+import { HomeComponent } from './home/home.component';
+import {ROUTES} from "./app.routes";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    DetailComponent,
-    FormationsComponent,
-    ConnaissancesComponent,
-    TemplateComponent,
-
+    FormulaireComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

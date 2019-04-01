@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
-import {PATH_HOME, PATH_DETAIL} from "./app.routes.constantes";
+import {PATH_HOME, PATH_DETAIL, PATH_FORMULAIRE} from "./app.routes.constantes";
 
 
 @Component({
@@ -20,6 +20,9 @@ export class AppComponent implements OnInit{
 
   navigateToDetail(){
     this.router.navigate([PATH_DETAIL, this.idDetail]);
+  }
+  navigateToFormulaire(){
+    this.router.navigate([PATH_FORMULAIRE]);
   }
   ngOnInit(): void {
     // this.router.events.subscribe((event)=>{

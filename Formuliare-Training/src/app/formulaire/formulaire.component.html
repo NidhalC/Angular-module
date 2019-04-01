@@ -1,0 +1,57 @@
+<form (ngSubmit)="handleTypeScriptSubmit()" [formGroup]="userForm">
+  <div>
+    <label> Nom : </label>
+    <input formControlName="nom"
+           class="input-angular">
+    <div *ngIf="userForm.get('nom').hasError('required') && userForm.get('nom').dirty ">
+      Le nom est requis
+    </div>
+    <div *ngIf="userForm.get('nom').hasError('pattern')">
+      Le nom doit commencer par une Majuscule
+    </div>
+  </div>
+
+  <div>
+    <label> Prénom : </label>
+    <input formControlName="prenom"
+           class="input-angular">
+    <div *ngIf="userForm.get('prenom').hasError('required') && userForm.get('prenom').dirty ">
+      Le prénom est requis
+    </div>
+  </div>
+  <div>
+    <label> n° Téléphone : </label>
+    <input formControlName="telephone"
+           class="input-angular">
+    <div *ngIf="userForm.get('telephone').hasError('min') || userForm.get('telephone').hasError('max') && userForm.get('telephone').dirty && userForm.get('telephone').hasError('pattern')" >
+      Le numéro doit contenir 10 chiffres valide
+    </div>
+  </div>
+
+  <div>
+    <label> Email : </label>
+    <input formControlName="email"
+           class="input-angular">
+    <div *ngIf="userForm.get('email').hasError('email') && userForm.get('email').dirty">
+      Le champ email n'est pas valide
+    </div>
+    <div *ngIf="userForm.get('email').hasError('required') && userForm.get('email').dirty">
+      Le champ email est requis
+    </div>
+  </div>
+  <div>
+    <label> Connaissance : </label>
+    <select formControlName="connaissance">
+      <option></option>
+      <option>JavaScript</option>
+      <option>TypeScript</option>
+      <option>Angular</option>
+    </select>
+    <div *ngIf="userForm.get('connaissance').hasError('required')">
+      Veuillez Selectionner Quelque chose
+    </div>
+  </div>
+  <button type="submit"
+  [disabled]="userForm.invalid" > Validation </button>
+  <button type="reset" (click)="handleClear()"> Reset </button>
+</form>
